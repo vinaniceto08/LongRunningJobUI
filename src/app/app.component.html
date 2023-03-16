@@ -1,0 +1,31 @@
+<div class="container">
+   <div class="row justify-content-center mt-5">
+    <h1>{{ title }}</h1>
+    <div>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="convert">Enter text:</label>
+          <input type="text" name="text" class="form-control" [(ngModel)]="text">
+        </div>
+        <div class="col" style="margin-top: 20px;">
+            <div>
+              <button type="submit" style="width: 50%;" class="btn btn-primary" >Convert</button>
+              <button type="button" style="width: 50%;" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+            </div>
+            
+        </div>
+       
+      
+      </form>
+      <div class="form-group mt-3">
+        <div> <label for="text">Out Put:</label></div>
+        <textarea class="col" [(ngModel)]="encodedText" style="width: 300px;"></textarea>
+      </div>
+    </div>
+    
+    <div>
+     
+    </div>
+   </div>
+ 
+</div>
